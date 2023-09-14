@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Galary</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1 id="header-text">Upload your .PNG .JPEG .JPG .GIF Files!</h1>
+        <form id="new-picture-form" accept="image/png image/jpeg image/jpg" action="/picture" method="post" enctype='multipart/form-data'>
+            <input type="file" id="new-picture-file" name="uploadedPicture" accept="image/png, image/jpeg, image/jpg, image/gif" >
+            <input type="text" id="new-picture-title" placeholder="Picture Title" maxlength="20" name="title">
+            <input type="submit" id="new-picture-submit" value="Submit">
+            <input type="number" placeholder="Height (px)" id="height" name="heightPX">
+            <input type="number" placeholder="Width (px)" id="width" name="widthPX">
+        </form>
+    </header>
+
+    <main>
+        <div id="pictures">
+           
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

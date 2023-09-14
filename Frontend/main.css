@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    max-width: 100%;
+}
+
+:root {
+    --grey: #58575a;
+    --greyer-grey: #4a494c;
+    --dark-gray: #454547;
+}
+
+body {
+    background-color: var(--grey);
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header {
+    height: 150px;
+    width: 400px;
+    margin-bottom: 30px;
+    display:flex;
+    flex-direction: column;
+}
+
+#new-picture-form {
+    margin-bottom: 10px;
+}
+
+#new-picture-file {
+    font-size: 1.5rem;
+}
+
+#new-picture-title {
+    margin-top:10px;
+    margin-bottom:10px;
+    color:whitesmoke;
+    font-weight: 500;
+    background: none;
+    background-color: var(--dark-gray);
+    border:0px solid black;
+    border-radius: 10px;
+    min-width: 200px;
+    resize: horizontal;
+    padding:10px;
+}
+
+#new-picture-title::placeholder {
+    color:white;
+}
+
+#new-picture-submit {
+    border: none;
+    background-color: transparent;
+    color:red;
+    font-size:2rem;
+    transition: 0.5s;
+}
+
+#new-picture-submit:hover {
+    cursor:pointer;
+    opacity: 0.8;
+}
+
+main {
+    position:relative;
+    margin-top:30px;
+}
+
+#pictures {
+    width:90vw;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.picture-div {
+    /* border: 1px solid whitesmoke; */
+    display:inline-flex;
+    background-color: var(--greyer-grey);
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin:5px 5px 20px 25px;
+}
+
+.picture-img {
+    width:300px;
+    height:300px;
+    padding:10px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    
+}
+
+.picture-title {
+    text-align: center;
+    font-size:2rem;
+    background:none;
+    border: none;
+    color:rgb(18, 16, 16);
+    transition: 0.5s;
+}
+
+.picture-title:not(:read-only) {
+    color:pink;
+}
+
+.actions {
+    display:flex;
+    justify-content: space-evenly;
+    width:50%;
+    height: 30px;
+}
+
+.edit {
+    background: none;
+    border:none;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    width:30px;
+    height:30px;
+    transition:0.4s;
+}
+
+.edit:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.delete {
+    background:none;
+    border:none;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    width:30px;
+    height:30px;
+    transition:0.4s;
+}
+
+.delete:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
